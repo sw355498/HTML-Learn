@@ -1,0 +1,23 @@
+h2.st1{
+    color: blue;
+    text-decoration: underline;
+}
+.st2{
+    color: orange;
+    font-style: italic;
+}
+.col1{
+    color: paleturquoise;
+}
+.col2{
+    color: purple;
+}
+.font1{
+    font-style: italic;
+}
+.underline{
+    text-decoration: underline;
+}
+p{
+    color: gray;
+}

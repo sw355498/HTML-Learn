@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div內文字的垂直對齊</title>
+    <style>
+        div{
+            margin-bottom: 20px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .fixed{
+            height: 100px;
+            line-height: 100px;
+        }
+        .not-fixed{
+            padding: 50px 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 方法一只適用於單行文字且沒有標籤的div -->
+    <div class="fixed">
+        高度有指定
+    </div>
+    <!-- 方法二 -->
+    <div class="not-fixed">
+        高度不指定
+    </div>
+</body>
+</html>

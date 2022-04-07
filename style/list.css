@@ -1,0 +1,9 @@
+.list{
+    list-style-image: url("../image/a3.jpeg");
+    border: 3px dotted lightseagreen;
+    border-radius: 20px;
+}
+.list1{
+    list-style-image: none;
+    list-style-type: circle;
+}

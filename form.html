@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+    <style>
+        fieldset{
+            width: 450px;
+            border: 1px solid darkblue;
+            border-radius: 20px;
+            margin: 0px auto 20px;
+            padding: 30px;
+        }
+        legend{
+            /* text-align: center; */
+            /* margin-left: 15px; */
+            color: brown;
+        }
+        .field{
+            width: 450px;
+            border-bottom: 1px dashed black;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .field-title{
+            width: 100px;
+            float: left;
+            text-align: right;
+        }
+        .btn{
+            width: 450px;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend><em>帳號註冊</em></legend>
+            <div class="field">
+                <label class="field-title" for="account">帳號：</label>
+                <input type="text" id="account" name="account" placeholder="請輸入帳號">
+            </div>
+            <div class="field">
+                <label class="field-title" for="pwd">密碼：</label>
+                <input type="password" id="pwd" name=""pwd placeholder="請輸入5~10字元密碼" maxlength="10" minlength="5">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><em>基本資料</em></legend>
+            <div class="field">
+                <label class="field-title" for="fullName">姓名：</label>
+                <input type="text" id="fullName" name="fullName" placeholder="請輸入姓名">
+            </div>
+            <div class="field">
+                <label class="field-title" for="">性別：</label>
+                <label><input type="radio" name="gender" value="male">男</label>
+                <label><input type="radio" name="gender" value="frmale">女</label>
+            </div>
+            <div class="field">
+                <label for="city" class="field-title">居住縣市：</label>
+                <select name="Living" id="city">
+                    <option value="TPE">台北市</option>
+                    <option value="TPH" selected>新北市</option>
+                    <option value="TYU">桃園市</option>
+                    <option value="HSC">新竹市</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="address" class="field-title">完整地址：</label>
+                <input type="text" name="address" id="address">
+            </div>
+            <div class="field">
+                <label for="photo" class="field-title">照片：</label>
+                <input type="file" name="photo" id="photo">
+            </div>
+            <div class="field">
+                <label for="" class="field-title">興趣：</label>
+                <label><input type="checkbox" name="hobby" value="music">音樂</label>
+                <label><input type="checkbox" name="hobby" value="sport">運動</label>
+                <label><input type="checkbox" name="hobby" value="movie">電影</label>
+                <label><input type="checkbox" name="hobby" value="travel">旅遊</label>
+            </div>
+            <div class="field">
+                <label class="field-title" for="remark">備註：</label>
+                <textarea name="remark" id="remark" cols="40" rows="10" maxlength="300" placeholder="可填寫300字元以內" autocomplete="off"></textarea>
+            </div>
+            <div>
+                <label class="field-title" for="">年齡：</label>
+                0~100<input type="range" id="age" min="0" max="100" step="1" onchange="ageChange()">
+                <input id="ageText">
+            </div>
+        </fieldset>
+        <div class="btn">
+            <input type="submit" value="送出">
+            <input type="reset" value="清除">
+        </div>
+    </form>
+    <script>
+        function ageChange(){
+            let age = document.getElementById('age').value;
+            document.getElementById('ageText').value = age;
+        }
+    </script>
+</body>
+</html>
